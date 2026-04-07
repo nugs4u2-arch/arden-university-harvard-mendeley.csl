@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl"
+       version="1.0"
+       class="author-date"
+       default-locale="en-GB">
+
+  <info>
+    <title>Arden University Harvard (Mendeley)</title>
+    <id>https://example.com/arden-university-harvard</id>
+    <category citation-format="author-date"/>
+    <summary>Harvard referencing style based on Arden University guidance (Aug 2025).</summary>
+    <updated>2026-04-07</updated>
+  </info>
+
+  <!-- Author -->
+  <macro name="author">
+    <names variable="author">
+      <name and="text"
+            delimiter=", "
+            initialize-with="."/>
+      <substitute>
+        <text value="Anon."/>
+      </substitute>
+    </names>
+  </macro>
+
+  <!-- Year -->
+  <macro name="year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <!-- In-text citations -->
+  <citation et-al-min="3" et-al-use-first="1">
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <text macro="author"/>
+        <text macro="year"/>
+      </group>
+    </layout>
+  </citation>
+
+  <!-- Reference list -->
+  <bibliography hanging-indent="true" et-al-min="3" et-al-use-first="1">
+    <layout suffix=".">
+      <group delimiter=" ">
+        <text macro="author"/>
+        <group prefix="(" suffix=").">
+          <text macro="year"/>
+        </group>
+        <text variable="title" font-style="italic"/>
+        <group delimiter=": ">
+          <text variable="publisher-place"/>
+          <text variable="publisher"/>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+
+</style>
