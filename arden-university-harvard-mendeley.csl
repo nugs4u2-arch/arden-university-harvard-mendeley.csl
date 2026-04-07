@@ -5,19 +5,18 @@
        default-locale="en-GB">
 
   <info>
-    <title>Arden University Harvard (Mendeley)</title>
-    <id>https://example.com/arden-university-harvard</id>
-    <category citation-format="author-date"/>
-    <summary>Harvard referencing style based on Arden University guidance (Aug 2025).</summary>
+    <title>Arden University Harvard</title>
+    <id>https://raw.githubusercontent.com/nugs4u2-arch/arden-university-harvard-mendeley.csl</id>
+    <link href="https://raw.githubusercontent.com/nugs4u2-arch/arden-university-harvard-mendeley.csl/main/arden-university-harvard-m    <category citation-format="author-date"/>
+    <category field="generic-base"/>
+    <summary>Harvard referencing style based on Arden University guidance (August 2025).</summary>
     <updated>2026-04-07</updated>
   </info>
 
   <!-- Author -->
   <macro name="author">
     <names variable="author">
-      <name and="text"
-            delimiter=", "
-            initialize-with="."/>
+      <name and="text" delimiter=", " initialize-with="."/>
       <substitute>
         <text value="Anon."/>
       </substitute>
@@ -31,7 +30,7 @@
     </date>
   </macro>
 
-  <!-- In-text citations -->
+  <!-- In-text citation -->
   <citation et-al-min="3" et-al-use-first="1">
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
